@@ -1,0 +1,41 @@
+﻿<Window x:Class="WpfApp1.UserToAdd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="UserToAdd" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Content="отмена" HorizontalAlignment="Left" Margin="23,10,0,0" VerticalAlignment="Top" Width="56" Click="Button_Click_1" Grid.RowSpan="2"/>
+        <Button Content="привязать" HorizontalAlignment="Left" Margin="94,10,0,0" VerticalAlignment="Top" Width="67" Click="Button_Click" Grid.RowSpan="2"/>
+        <ListBox x:Name="orderList" SelectedValue="selectOrder" SelectionChanged="orderList_SelectionChanged" Margin="10,72,10,217" Grid.RowSpan="2">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="5" Orientation="Horizontal">
+                        <TextBlock FontSize="16"  Text="{Binding Path=art}" Margin="5"/>
+                        <TextBlock FontSize="16" Text="{Binding Path=description}" Margin="5"/>
+                        <TextBlock FontSize="16" Text="{Binding Path=type}" Margin="5" />
+                        <TextBlock FontSize="16" Text="{Binding Path=status}" Margin="5" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <ListBox x:Name="userList" SelectedValue="selectOrder" SelectionChanged="orderList_SelectionChanged" Margin="10,255,10,10" Grid.RowSpan="2">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="5" Orientation="Horizontal">
+                        <TextBlock FontSize="16" Text="{Binding Path=name}" Margin="5"/>
+                        
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Label Content="Заявки" HorizontalAlignment="Left" Margin="52,46,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="76"/>
+        <Label Content="Пользователи" HorizontalAlignment="Left" Margin="52,224,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="92"/>
+    </Grid>
+</Window>

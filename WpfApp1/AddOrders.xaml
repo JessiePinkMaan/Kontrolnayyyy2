@@ -1,0 +1,20 @@
+﻿<Window x:Class="WpfApp1.AddOrders"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="AddOrders" Height="450" Width="800">
+    <Grid>
+        <Button Content="отмена" HorizontalAlignment="Left" Margin="23,10,0,0" VerticalAlignment="Top" Width="56" Click="Button_Click_1"/>
+        <Button Content="добавить" HorizontalAlignment="Left" Margin="94,10,0,0" VerticalAlignment="Top" Width="57" Click="Add_Button_Click"/>
+        <StackPanel Margin="146,58,146,87">
+            <TextBox x:Name="art" Text="артикуль" Margin="50,35,50,5"></TextBox>
+            <TextBox x:Name="description" Text="Описание заявки" Margin="50,5"></TextBox>
+            <TextBox x:Name="type" Text="тип заявки" Margin="50,5"></TextBox>
+            <TextBox x:Name="status" Text="статус " Margin="50,5"></TextBox>
+            
+        </StackPanel>
+    </Grid>
+</Window>
