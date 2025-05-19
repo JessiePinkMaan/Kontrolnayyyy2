@@ -39,8 +39,9 @@ namespace WpfApp1
         {
             string Login = login.Text;
             string Password = password.Text;
-
-            // Проверка на null или пустые строки
+            string Name = name.Text;
+            string PhoneNumber = phoneNumber.Text;
+         
             if (string.IsNullOrEmpty(Login) || string.IsNullOrEmpty(Password))
             {
                 MessageBox.Show("Логин и пароль не могут быть пустыми.");
@@ -49,7 +50,7 @@ namespace WpfApp1
 
             if (IsValidUser(Login))
             {
-                User user = new User() { login = Login, password = Password };
+                User user = new User() { login = Login, password = Password ,name = Name, phoneNumber = PhoneNumber };
                 context.users.Add(user);
                 context.SaveChanges();
 

@@ -5,10 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Reg" Height="250" Width="400">
+        Title="Reg" Height="340" Width="400">
     <Grid>
         <Button Content="назад" HorizontalAlignment="Left" Margin="23,10,0,0" VerticalAlignment="Top" Width="56" Click="Button_Click_1"/>
         <StackPanel Margin="10,50">
+            <Label Content="имя:"/>
+            <TextBox x:Name="name"/>
+            <Label Content="номер телефона:"/>
+            <TextBox x:Name="phoneNumber"/>
             <Label Content="Логин:"/>
             <TextBox x:Name="login"/>
             <Label Content="Пароль:"/>
